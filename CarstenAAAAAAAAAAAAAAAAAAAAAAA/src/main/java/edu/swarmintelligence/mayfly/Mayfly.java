@@ -12,14 +12,4 @@ public final class Mayfly {
         this.vel = new double[dimensions];
         this.pbestPos = new double[dimensions];
     }
-
-    /**
-     * Updates personal best if current fitness is better (lower).
-     */
-    public void updatePersonalBest() {
-        if (fitness < pbestFitness) {
-            pbestFitness = fitness;
-            System.arraycopy(pos, 0, pbestPos, 0, pos.length);
-        }
-    }
 }
