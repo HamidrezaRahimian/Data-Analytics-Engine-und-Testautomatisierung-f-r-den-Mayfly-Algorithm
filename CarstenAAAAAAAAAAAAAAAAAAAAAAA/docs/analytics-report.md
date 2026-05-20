@@ -5,7 +5,7 @@
 | Key | Value |
 | --- | --- |
 | Seed | 42 |
-| Generated at | 2026-05-20T19:56:19.025996200Z |
+| Generated at | 2026-05-20T20:31:44.776683600Z |
 | Java version | 25.0.3 |
 | JUnit | 5.10.3 |
 | AssertJ | 3.26.3 |
@@ -21,6 +21,16 @@
 | Population size | 40 |
 | Max iterations | 1000 |
 | Inertia | 0.4 to 0.9 |
+
+## agent-interaction
+
+| Metric | Value |
+| --- | --- |
+| Nuptial dances | 1000 |
+| Male attraction updates | 39000 |
+| Female attraction rate | count=1000, first=0.175, last=1.0, min=0.175, max=1.0 |
+| Mean pair distance | count=1000, first=83.35545493909704, last=0.006495295131574472, min=0.004105819286183446, max=83.35545493909704 |
+| Pair fitness gap | count=1000, first=0.08309845913928023, last=0.005975636944360652, min=0.004715082885706057, max=2.008334154161461 |
 
 ## global-memory
 
@@ -48,16 +58,6 @@
 | Plateau segments | 53 |
 | Convergence rate estimate | -0.016899703790187872 |
 | Population diversity | count=1000, first=67.17934107707926, last=0.012561213520632927, min=0.010498412075259759, max=67.17934107707926 |
-
-## agent-interaction
-
-| Metric | Value |
-| --- | --- |
-| Nuptial dances | 1000 |
-| Male attraction updates | 39000 |
-| Female attraction rate | count=1000, first=0.175, last=1.0, min=0.175, max=1.0 |
-| Mean pair distance | count=1000, first=83.35545493909704, last=0.006495295131574472, min=0.004105819286183446, max=83.35545493909704 |
-| Pair fitness gap | count=1000, first=0.08309845913928023, last=0.005975636944360652, min=0.004715082885706057, max=2.008334154161461 |
 
 ## Multi-run Statistics
 

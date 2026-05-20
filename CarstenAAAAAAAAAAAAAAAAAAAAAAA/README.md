@@ -44,7 +44,14 @@ mvn -Pmulti-run verify
 
 ## Run Main
 
-After compilation, run the main class through Gradle:
+Linux:
+
+```bash
+./gradlew classes
+java -cp build/classes/java/main edu.swarmintelligence.mayfly.Main
+```
+
+Windows PowerShell:
 
 ```powershell
 .\gradlew.bat classes
@@ -95,6 +102,8 @@ Generated export files:
 target/analytics/analytics-report.csv
 target/analytics/analytics-report.json
 ```
+
+The Gradle task `multiRunVerify` is defined in `build.gradle.kts`.
 
 ## Directory Structure
 

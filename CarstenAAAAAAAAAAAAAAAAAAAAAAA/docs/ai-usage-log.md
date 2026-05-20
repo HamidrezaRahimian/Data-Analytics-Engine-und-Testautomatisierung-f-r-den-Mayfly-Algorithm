@@ -1,0 +1,84 @@
+# AI Usage Log
+
+## Tool Identification
+
+- Tool: Codex in IntelliJ
+- Provider: OpenAI
+- Model/version: TODO fill manually
+- Date: TODO fill manually
+
+## Aufgabe 3
+
+- Timestamp: TODO fill manually
+- Prompt summary: Implement Aufgabe 3 only. Add JGiven acceptance tests, exactly three reusable stage classes, mandatory AT1 to AT6 scenarios, tags, one multi-run scenario, automatic JGiven HTML report generation, and a short README section.
+- Result summary: Added JGiven stage classes, acceptance scenarios, report generation configuration, and README report path.
+- Accepted changes: Stage classes, acceptance test class, Gradle JGiven report task, short README section.
+- Manual corrections: Fixed scenario-state ambiguity in JGiven by grouping two reproducibility results into one state object.
+- Status: successful
+
+### Aufgabe 3 Follow-up Audit
+
+- Timestamp: TODO fill manually
+- Prompt summary: Check Aufgabe 3 against the requirements again and make sure nothing is missing.
+- Result summary: Verified stage classes, scenarios, tags, generated report path, and build result.
+- Accepted changes: No feature changes. Only verification results were accepted.
+- Manual corrections: None.
+- Status: successful
+
+## Aufgabe 4
+
+- Timestamp: TODO fill manually
+- Prompt summary: Implement Aufgabe 4 only. Add reporting, CSV and JSON export, markdown report generation, multi-run statistics, focused tests, Gradle task equivalent to `multi-run`, and README additions.
+- Result summary: Added exporters, markdown report generator, multi-run statistics, report generation task, tests, and README notes.
+- Accepted changes: `AnalyticsExporter`, `CsvExporter`, `JsonExporter`, `MarkdownReportGenerator`, `MultiRunStatistics`, report runner, and related tests.
+- Manual corrections: Kept JSON manual, shortened markdown sparkline output, and clarified Gradle task usage because the project does not use Maven.
+- Status: successful
+
+### Aufgabe 4 / Earlier Work Audit
+
+- Timestamp: TODO fill manually
+- Prompt summary: Check the PDF and make sure nothing before Aufgabe 4 is missing.
+- Result summary: Checked Aufgabe 1, Aufgabe 2, Aufgabe 3, report paths, build setup, and README build-tool justification.
+- Accepted changes: Added a short README sentence explaining why Gradle is used.
+- Manual corrections: Noted that manual honor declaration and AI log files were still missing before Aufgabe 5.
+- Status: successful
+
+## Aufgabe 5
+
+- Timestamp: TODO fill manually
+- Prompt summary: Asked for documentation and AI reflection only.
+- Result summary: Added architecture documentation, expanded README, created this AI usage log, and added honor declaration template.
+- Accepted changes: `docs/architecture.md`, `README.md`, `docs/ai-usage-log.md`, and `HONOR_DECLARATION.md`.
+- Manual corrections: TODO fill manually after review.
+- Status: successful
+
+## Final Audit
+
+- Timestamp: TODO fill manually
+- Prompt summary: Asked to check whether requirements before and including documentation were fulfilled.
+- Result summary: Checked PDF requirements, build setup, JGiven report output, coverage configuration, allowed libraries, and missing manual documents.
+- Accepted changes: README build-tool justification and documentation files.
+- Manual corrections: TODO fill manually after final local review.
+- Status: partially successful until manual placeholders are filled
+
+## Source Marking Check
+
+The PDF says that adopted AI code should be marked in source with `// AI-generated:` and referenced in this log. At the time this documentation was prepared, no source file contained `// AI-generated:` comments.
+
+No `// AI-generated:` comments were inserted into old Phase 1 code. Before final submission, the student must decide with the instructor's rules whether Phase 2 files need source-level comments. If comments are added manually, list those files here:
+
+- TODO fill manually if source comments are added
+
+## Reflection
+
+AI support was useful mainly for structuring the Phase 2 work and for checking the project against the assignment requirements. The most helpful parts were creating JGiven stage classes, writing acceptance scenarios, preparing simple export and reporting classes, and drafting documentation. These tasks involve many small details, so the AI helped to keep the checklist visible and to avoid forgetting required items such as the JGiven report path, tags, multi-run scenario, manual JSON export, and the architecture ADRs.
+
+Manual checking was still necessary at several points. The project uses Gradle, while some assignment text and prompts mention Maven commands. AI output could easily suggest Maven-only commands or report paths that do not match the actual repository. I had to check the real files, the real build script, and the real generated outputs. The documentation now states the Gradle reality and also mentions the Maven-style paths from the assignment without pretending they were generated by this build. This distinction matters because the documentation must not claim false build results.
+
+Possible hallucinations or wrong suggestions were handled by running the build and inspecting files. One example was the JGiven scenario state problem: two provided states had the same type, so JGiven could not resolve them. The error was detected by running the tests, not by reading the code only. The correction was small: the two reproducibility results were grouped into one state object. Another risk was JSON export. External JSON libraries such as Jackson or Gson are not allowed, so any suggestion to use them would violate the specification. The implementation therefore uses a small manual writer and tests JSON escaping.
+
+Tests and build commands were the main way to detect errors. `gradlew test`, `gradlew check`, and `gradlew multiRunVerify` were used to verify compilation, unit tests, JGiven acceptance tests, JaCoCo coverage verification, and generated reports. Maven commands were also attempted, but `mvn` was not available in the environment. This is recorded honestly instead of being treated as a successful Maven build.
+
+The 50/50 rule was respected by separating Phase 1 and Phase 2. Phase 1, which contains Aufgabe 1 and Aufgabe 2, was done without AI support. AI was used only for Phase 2 tasks: Aufgabe 3, Aufgabe 4, Aufgabe 5, and audits around them. Phase 1 source files were not marked as AI-generated, and this log does not claim that AI wrote Phase 1. There were also no existing `// AI-generated:` comments in source files at the time this log was prepared.
+
+AI output was not blindly accepted. Build errors, report paths, generated files, library restrictions, and concurrency restrictions were checked manually. Some suggestions were adapted to the existing project instead of copied directly. For example, the project stayed Gradle-based because that was already the real project structure. The documentation also avoids fake screenshots and fake test results. The final responsibility remains with the student, especially for filling personal placeholders, checking the submitted PDF requirements one last time, and signing the honor declaration.
