@@ -16,18 +16,35 @@ repositories {
     mavenCentral()
 }
 
+val jgivenReport by configurations.creating
+
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.assertj:assertj-core:3.26.3")
+    testImplementation("com.tngtech.jgiven:jgiven-junit5:2.0.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    jgivenReport("com.tngtech.jgiven:jgiven-html5-report:2.0.3")
     compileOnly("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
 }
 
 tasks.test {
     useJUnitPlatform()
+    systemProperty("jgiven.report.dir", layout.projectDirectory.dir("target/jgiven-reports/json").asFile.absolutePath)
     finalizedBy(tasks.jacocoTestReport)
+    finalizedBy("jgivenHtmlReport")
+}
+
+tasks.register<JavaExec>("jgivenHtmlReport") {
+    dependsOn(tasks.test)
+    classpath = jgivenReport
+    mainClass.set("com.tngtech.jgiven.report.ReportGenerator")
+    args(
+        "--format=html",
+        "--sourceDir=${layout.projectDirectory.dir("target/jgiven-reports/json").asFile.absolutePath}",
+        "--targetDir=${layout.projectDirectory.dir("target/jgiven-reports/html").asFile.absolutePath}"
+    )
 }
 
 tasks.jacocoTestReport {
