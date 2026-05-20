@@ -15,10 +15,10 @@ public class MarkdownReportGenerator {
         row(markdown, "Seed", report.seed());
         row(markdown, "Generated at", report.generatedAt());
         row(markdown, "Java version", System.getProperty("java.version"));
-        row(markdown, "JUnit", "5");
-        row(markdown, "AssertJ", "configured");
-        row(markdown, "JGiven", "configured");
-        row(markdown, "JaCoCo", "configured");
+        row(markdown, "JUnit", "5.10.3");
+        row(markdown, "AssertJ", "3.26.3");
+        row(markdown, "JGiven", "2.0.3");
+        row(markdown, "JaCoCo", "Gradle plugin");
 
         markdown.append("\n## Configuration\n\n");
         markdown.append("| Key | Value |\n");
@@ -78,9 +78,10 @@ public class MarkdownReportGenerator {
         if (values.isEmpty()) {
             return "";
         }
+        List<Double> sampled = sample(values, 80);
         double min = Double.POSITIVE_INFINITY;
         double max = Double.NEGATIVE_INFINITY;
-        for (double value : values) {
+        for (double value : sampled) {
             if (Double.isFinite(value)) {
                 min = Math.min(min, value);
                 max = Math.max(max, value);
@@ -90,7 +91,7 @@ public class MarkdownReportGenerator {
             return "";
         }
         StringBuilder text = new StringBuilder();
-        for (double value : values) {
+        for (double value : sampled) {
             if (!Double.isFinite(value)) {
                 continue;
             }
@@ -98,6 +99,18 @@ public class MarkdownReportGenerator {
             text.append(SPARKLINE[index]);
         }
         return text.toString();
+    }
+
+    private List<Double> sample(List<Double> values, int maxCount) {
+        if (values.size() <= maxCount) {
+            return values;
+        }
+        java.util.ArrayList<Double> sampled = new java.util.ArrayList<>();
+        for (int i = 0; i < maxCount; i++) {
+            int index = (int) Math.round(i * (values.size() - 1.0) / (maxCount - 1.0));
+            sampled.add(values.get(index));
+        }
+        return sampled;
     }
 
     private void analyzerSection(StringBuilder markdown, String name, AnalyzerResult result) {

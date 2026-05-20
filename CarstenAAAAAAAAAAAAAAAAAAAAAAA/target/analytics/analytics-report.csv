@@ -1,0 +1,26 @@
+section,key,value
+config,dimensions,10
+config,populationSize,40
+config,maxIterations,1000
+run,seed,42
+run,generatedAt,2026-05-20T19:56:19.025996200Z
+analyzer,global-memory,GlobalMemoryResult
+global-memory,gbestUpdateCount,525
+global-memory,trajectoryCount,1000
+global-memory,firstHittingIteration,175
+global-memory,sourceDistribution,"{MALE=0.9466666666666667, FEMALE=0.0019047619047619048, OFFSPRING=0.05142857142857143}"
+analyzer,local-memory,LocalMemoryResult
+local-memory,agentCountWithPbestUpdates,80015
+local-memory,totalPbestUpdates,89693
+local-memory,meanPbestImprovement,0.20689531644816345
+local-memory,pbestPositionDiversityCount,1000
+analyzer,convergence,ConvergenceResult
+convergence,curveCount,1000
+convergence,iterationsToThreshold,175
+convergence,plateauCount,53
+convergence,convergenceRateEstimate,-0.016899703790187872
+analyzer,agent-interaction,AgentInteractionResult
+agent-interaction,nuptialDanceCount,1000
+agent-interaction,attractionCount,39000
+agent-interaction,femaleAttractionRateCount,1000
+agent-interaction,interactionHistogram,"{FEMALE_ATTRACTION=39927, NUPTIAL_DANCE=1000, MALE_ATTRACTION=39000, FEMALE_RANDOM_WALK=73}"

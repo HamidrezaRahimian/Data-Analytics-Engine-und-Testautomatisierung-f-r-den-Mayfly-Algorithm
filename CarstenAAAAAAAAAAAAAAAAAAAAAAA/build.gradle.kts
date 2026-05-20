@@ -47,6 +47,17 @@ tasks.register<JavaExec>("jgivenHtmlReport") {
     )
 }
 
+tasks.register<JavaExec>("generateAnalyticsReport") {
+    dependsOn(tasks.classes)
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("edu.swarmintelligence.mayfly.AnalyticsReportMain")
+}
+
+tasks.register("multiRunVerify") {
+    dependsOn(tasks.check)
+    dependsOn("generateAnalyticsReport")
+}
+
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {

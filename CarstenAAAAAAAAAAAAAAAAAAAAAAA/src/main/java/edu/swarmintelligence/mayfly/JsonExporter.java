@@ -158,6 +158,12 @@ public class JsonExporter implements AnalyticsExporter {
         if (value instanceof String text) {
             return "\"" + escape(text) + "\"";
         }
+        if (value instanceof Double number && !Double.isFinite(number)) {
+            return "null";
+        }
+        if (value instanceof Float number && !Float.isFinite(number)) {
+            return "null";
+        }
         if (value instanceof Number || value instanceof Boolean) {
             return String.valueOf(value);
         }
