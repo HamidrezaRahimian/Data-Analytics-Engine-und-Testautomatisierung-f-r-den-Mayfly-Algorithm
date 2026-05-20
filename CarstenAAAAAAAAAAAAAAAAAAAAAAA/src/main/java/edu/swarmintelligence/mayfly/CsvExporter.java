@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 CSV exporter, reviewed and accepted manually.
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;

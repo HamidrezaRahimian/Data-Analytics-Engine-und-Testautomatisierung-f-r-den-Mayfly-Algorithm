@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 report generation entry point, reviewed and accepted manually.
 import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.file.Files;

@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 JGiven acceptance tests, reviewed and accepted manually.
 import com.tngtech.jgiven.annotation.Description;
 import com.tngtech.jgiven.junit5.ScenarioTest;
 import org.junit.jupiter.api.Tag;

@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 report generator tests, reviewed and accepted manually.
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;

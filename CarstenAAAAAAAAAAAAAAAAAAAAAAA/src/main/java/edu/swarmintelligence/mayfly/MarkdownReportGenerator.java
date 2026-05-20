@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 markdown report generator, reviewed and accepted manually.
 import java.util.List;
 import java.util.Map;
 

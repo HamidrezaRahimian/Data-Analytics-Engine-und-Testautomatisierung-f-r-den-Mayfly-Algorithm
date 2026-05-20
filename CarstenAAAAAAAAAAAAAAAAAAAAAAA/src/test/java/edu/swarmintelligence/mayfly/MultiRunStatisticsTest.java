@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 statistics tests, reviewed and accepted manually.
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

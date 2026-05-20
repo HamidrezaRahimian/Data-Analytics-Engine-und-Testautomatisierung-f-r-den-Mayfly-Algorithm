@@ -1,5 +1,6 @@
 package edu.swarmintelligence.mayfly;
 
+// AI-generated: Phase 2 statistics helper, reviewed and accepted manually.
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

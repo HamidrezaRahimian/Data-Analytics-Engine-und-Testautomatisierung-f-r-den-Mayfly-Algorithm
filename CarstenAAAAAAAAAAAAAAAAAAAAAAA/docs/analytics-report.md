@@ -5,7 +5,7 @@
 | Key | Value |
 | --- | --- |
 | Seed | 42 |
-| Generated at | 2026-05-20T20:31:44.776683600Z |
+| Generated at | 2026-05-20T21:44:16.603286300Z |
 | Java version | 25.0.3 |
 | JUnit | 5.10.3 |
 | AssertJ | 3.26.3 |
@@ -22,15 +22,14 @@
 | Max iterations | 1000 |
 | Inertia | 0.4 to 0.9 |
 
-## agent-interaction
+## local-memory
 
 | Metric | Value |
 | --- | --- |
-| Nuptial dances | 1000 |
-| Male attraction updates | 39000 |
-| Female attraction rate | count=1000, first=0.175, last=1.0, min=0.175, max=1.0 |
-| Mean pair distance | count=1000, first=83.35545493909704, last=0.006495295131574472, min=0.004105819286183446, max=83.35545493909704 |
-| Pair fitness gap | count=1000, first=0.08309845913928023, last=0.005975636944360652, min=0.004715082885706057, max=2.008334154161461 |
+| Agents with pbest updates | 80015 |
+| Total pbest updates | 89693 |
+| Mean pbest improvement | 0.20689531644816345 |
+| Pbest diversity | count=1000, first=15.188102291652523, last=1.6180898309825947E-14, min=1.6180898309825947E-14, max=15.188102291652523 |
 
 ## global-memory
 
@@ -41,14 +40,15 @@
 | Stagnation streak count | 231 |
 | Gbest sparkline | █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ |
 
-## local-memory
+## agent-interaction
 
 | Metric | Value |
 | --- | --- |
-| Agents with pbest updates | 80015 |
-| Total pbest updates | 89693 |
-| Mean pbest improvement | 0.20689531644816345 |
-| Pbest diversity | count=1000, first=15.188102291652523, last=1.6180898309825947E-14, min=1.6180898309825947E-14, max=15.188102291652523 |
+| Nuptial dances | 1000 |
+| Male attraction updates | 39000 |
+| Female attraction rate | count=1000, first=0.175, last=1.0, min=0.175, max=1.0 |
+| Mean pair distance | count=1000, first=83.35545493909704, last=0.006495295131574472, min=0.004105819286183446, max=83.35545493909704 |
+| Pair fitness gap | count=1000, first=0.08309845913928023, last=0.005975636944360652, min=0.004715082885706057, max=2.008334154161461 |
 
 ## convergence
 
