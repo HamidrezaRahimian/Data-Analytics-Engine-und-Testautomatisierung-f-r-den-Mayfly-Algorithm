@@ -15,7 +15,7 @@ public class ThenAnalyticsReport extends Stage<ThenAnalyticsReport> {
     MayflyResult result;
 
     @ExpectedScenarioState
-    MayflyResult secondResult;
+    WhenAlgorithmRuns.ReproducibilityRun reproducibilityRun;
 
     @ExpectedScenarioState
     AnalyticsReport report;
@@ -27,8 +27,10 @@ public class ThenAnalyticsReport extends Stage<ThenAnalyticsReport> {
     ConvergenceAnalyzer.ConvergenceResult convergenceResult;
 
     public ThenAnalyticsReport both_runs_have_the_same_gbest() {
-        assertThat(result.gbestFitness()).isEqualTo(secondResult.gbestFitness());
-        assertThat(result.gbestPosition()).containsExactly(secondResult.gbestPosition());
+        assertThat(reproducibilityRun.first().gbestFitness())
+                .isEqualTo(reproducibilityRun.second().gbestFitness());
+        assertThat(reproducibilityRun.first().gbestPosition())
+                .containsExactly(reproducibilityRun.second().gbestPosition());
         return self();
     }
 

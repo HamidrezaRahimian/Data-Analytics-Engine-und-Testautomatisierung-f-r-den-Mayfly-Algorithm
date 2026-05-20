@@ -1,0 +1,708 @@
+{
+  "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+  "name": "Mayfly Acceptance",
+  "scenarios": [
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "female_attraction_rate_is_above_threshold",
+      "description": "AT4 Agent interaction: female attraction rate is above a small threshold.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-agent-interaction"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 7638700,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "seed $ is used",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "seed"
+                },
+                {
+                  "value": "42",
+                  "argumentInfo": {
+                    "argumentName": "seed",
+                    "formattedValue": "42"
+                  }
+                },
+                {
+                  "value": "is used"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 7380300,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the female attraction threshold is",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the female attraction threshold is"
+                },
+                {
+                  "value": "0.05",
+                  "argumentInfo": {
+                    "argumentName": "threshold",
+                    "formattedValue": "0.05"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1308000,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 329630500,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the female attraction rate is above the threshold",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the female attraction rate is above the threshold"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 9506900,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 407584000
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 407584000
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "same_seed_produces_same_gbest",
+      "description": "AT1 Reproducibility: same seed gives the same global best.",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 172300,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the same seed is used twice",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the same seed is used twice"
+                },
+                {
+                  "value": "42",
+                  "argumentInfo": {
+                    "argumentName": "seed",
+                    "formattedValue": "42"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1567700,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs twice",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs twice"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 148322200,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "both runs have the same gbest",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "both runs have the same gbest"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4018300,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 156247200
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 156247200
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "gbest_trajectory_is_monotonic",
+      "description": "AT3 Global memory: global best fitness never increases.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-global-memory"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 83400,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "seed $ is used",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "seed"
+                },
+                {
+                  "value": "42",
+                  "argumentInfo": {
+                    "argumentName": "seed",
+                    "formattedValue": "42"
+                  }
+                },
+                {
+                  "value": "is used"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1009300,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 111751000,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the gbest trajectory is monotonic",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the gbest trajectory is monotonic"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2598300,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 116866000
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 116866000
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "pbest_updates_are_recorded",
+      "description": "AT5 Local memory: agents with pbest update events have at least one recorded update.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-local-memory"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 97400,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "seed $ is used",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "seed"
+                },
+                {
+                  "value": "42",
+                  "argumentInfo": {
+                    "argumentName": "seed",
+                    "formattedValue": "42"
+                  }
+                },
+                {
+                  "value": "is used"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1083000,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 115110600,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "pbest updates are recorded for agents",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "pbest updates are recorded for agents"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 7112000,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 125087000
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 125087000
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "multiple_runs_have_reasonable_average_fitness",
+      "description": "Multi-run: ten deterministic seeds keep mean plus standard deviation reasonable.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-convergence"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 90000,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "ten fixed seeds are used",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "ten fixed seeds are used"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 37600,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs for all seeds",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs for all seeds"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 509353500,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "mean plus standard deviation is reasonable",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mean plus standard deviation is reasonable"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1235400,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 512679000
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 512679000
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "constant_fitness_stream_has_one_plateau",
+      "description": "AT6 Plateau detection: a constant fitness stream creates one plateau.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-convergence"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "a constant fitness stream",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "a constant fitness stream"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 118700,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the constant stream is analyzed",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the constant stream is analyzed"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 196900,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "exactly one plateau is detected",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "exactly one plateau is detected"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 127300,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 1604500
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 1604500
+    },
+    {
+      "className": "edu.swarmintelligence.mayfly.MayflyAcceptanceTest",
+      "testMethodName": "default_run_converges_below_smoke_bound",
+      "description": "AT2 Convergence: default configuration reaches the Ackley smoke bound.",
+      "tagIds": [
+        "org.junit.jupiter.api.Tag-convergence"
+      ],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the default configuration",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the default configuration"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 93000,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "seed $ is used",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "seed"
+                },
+                {
+                  "value": "42",
+                  "argumentInfo": {
+                    "argumentName": "seed",
+                    "formattedValue": "42"
+                  }
+                },
+                {
+                  "value": "is used"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1204700,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the algorithm runs",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the algorithm runs"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 112896400,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the final fitness is below",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the final fitness is below"
+                },
+                {
+                  "value": "0.001",
+                  "argumentInfo": {
+                    "argumentName": "expectedFitness",
+                    "formattedValue": "0.001"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1511000,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 117317000
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 117317000
+    }
+  ],
+  "tagMap": {
+    "org.junit.jupiter.api.Tag-agent-interaction": {
+      "fullType": "org.junit.jupiter.api.Tag",
+      "type": "Tag",
+      "value": "agent-interaction",
+      "description": "JUnit 5 Tag",
+      "color": "orange",
+      "href": ""
+    },
+    "org.junit.jupiter.api.Tag-global-memory": {
+      "fullType": "org.junit.jupiter.api.Tag",
+      "type": "Tag",
+      "value": "global-memory",
+      "description": "JUnit 5 Tag",
+      "color": "orange",
+      "href": ""
+    },
+    "org.junit.jupiter.api.Tag-local-memory": {
+      "fullType": "org.junit.jupiter.api.Tag",
+      "type": "Tag",
+      "value": "local-memory",
+      "description": "JUnit 5 Tag",
+      "color": "orange",
+      "href": ""
+    },
+    "org.junit.jupiter.api.Tag-convergence": {
+      "fullType": "org.junit.jupiter.api.Tag",
+      "type": "Tag",
+      "value": "convergence",
+      "description": "JUnit 5 Tag",
+      "color": "orange",
+      "href": ""
+    }
+  }
+}

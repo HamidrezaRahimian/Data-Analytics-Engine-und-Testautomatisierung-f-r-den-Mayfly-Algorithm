@@ -14,9 +14,6 @@ public class GivenMayflyConfiguration extends Stage<GivenMayflyConfiguration> {
     long seed;
 
     @ProvidedScenarioState
-    long secondSeed;
-
-    @ProvidedScenarioState
     List<Long> seeds;
 
     @ProvidedScenarioState
@@ -37,7 +34,6 @@ public class GivenMayflyConfiguration extends Stage<GivenMayflyConfiguration> {
 
     public GivenMayflyConfiguration the_same_seed_is_used_twice(long seed) {
         this.seed = seed;
-        this.secondSeed = seed;
         return self();
     }
 

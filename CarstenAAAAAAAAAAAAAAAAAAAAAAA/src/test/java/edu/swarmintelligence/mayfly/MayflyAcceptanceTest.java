@@ -1,8 +1,8 @@
 package edu.swarmintelligence.mayfly;
 
 import com.tngtech.jgiven.annotation.Description;
-import com.tngtech.jgiven.annotation.Tag;
 import com.tngtech.jgiven.junit5.ScenarioTest;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 class MayflyAcceptanceTest extends ScenarioTest<GivenMayflyConfiguration, WhenAlgorithmRuns, ThenAnalyticsReport> {

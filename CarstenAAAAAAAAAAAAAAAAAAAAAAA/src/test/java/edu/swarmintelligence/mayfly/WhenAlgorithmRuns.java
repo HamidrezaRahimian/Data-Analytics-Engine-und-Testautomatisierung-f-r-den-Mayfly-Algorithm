@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WhenAlgorithmRuns extends Stage<WhenAlgorithmRuns> {
+    record ReproducibilityRun(MayflyResult first, MayflyResult second) {
+    }
+
     @ExpectedScenarioState
     MayflyConfig config;
 
     @ExpectedScenarioState
     long seed;
-
-    @ExpectedScenarioState
-    long secondSeed;
 
     @ExpectedScenarioState
     List<Long> seeds;
@@ -27,7 +27,7 @@ public class WhenAlgorithmRuns extends Stage<WhenAlgorithmRuns> {
     MayflyResult result;
 
     @ProvidedScenarioState
-    MayflyResult secondResult;
+    ReproducibilityRun reproducibilityRun;
 
     @ProvidedScenarioState
     AnalyticsReport report;
@@ -48,8 +48,9 @@ public class WhenAlgorithmRuns extends Stage<WhenAlgorithmRuns> {
     }
 
     public WhenAlgorithmRuns the_algorithm_runs_twice() {
-        result = new MayflyAlgorithm().run(config, seed);
-        secondResult = new MayflyAlgorithm().run(config, secondSeed);
+        MayflyResult first = new MayflyAlgorithm().run(config, seed);
+        MayflyResult second = new MayflyAlgorithm().run(config, seed);
+        reproducibilityRun = new ReproducibilityRun(first, second);
         return self();
     }
 
