@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
@@ -107,10 +108,10 @@ class ConvergenceAnalyzerTest {
         }
     }
 
-    static Stream<org.junit.jupiter.params.provider.Arguments> plateauParameters() {
+    static Stream<Arguments> plateauParameters() {
         return Stream.of(
-                org.junit.jupiter.params.provider.Arguments.of(0.0, 4),
-                org.junit.jupiter.params.provider.Arguments.of(0.01, 3)
+                Arguments.of(0.0, 4),
+                Arguments.of(0.01, 3)
         );
     }
 
