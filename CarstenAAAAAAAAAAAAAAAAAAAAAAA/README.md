@@ -22,7 +22,9 @@ Linux with Gradle:
 
 ```bash
 ./gradlew test
-./gradlew check
+./gradlew build
+./gradlew jacocoTestReport
+./gradlew jacocoTestCoverageVerification
 ./gradlew multiRunVerify
 ```
 
@@ -30,7 +32,9 @@ Windows PowerShell with Gradle:
 
 ```powershell
 .\gradlew.bat test
-.\gradlew.bat check
+.\gradlew.bat build
+.\gradlew.bat jacocoTestReport
+.\gradlew.bat jacocoTestCoverageVerification
 .\gradlew.bat multiRunVerify
 ```
 
@@ -112,6 +116,7 @@ src/main/java/edu/swarmintelligence/mayfly/   production code
 src/test/java/edu/swarmintelligence/mayfly/   unit and acceptance tests
 src/test/resources/                           test configuration
 docs/                                         documentation and generated analytics report
+docs/git-history.md                          copied Git history summary
 build/                                        Gradle build output
 target/                                       generated JGiven and analytics output
 ```

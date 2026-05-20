@@ -303,6 +303,23 @@ Important AI answer summary:
 - Added this raw prompt log from Aufgabe 3 onward.
 - Kept Phase 1 out of this log because it was completed without AI support.
 
+### Prompt: Git History Folder
+
+```text
+i added git data in a folder gitHistory , so use them and create that git histroy and logs needed , exactly what spezifikation asked.
+
+then tell me again what is missing and need to be fixed
+BTW i signed the PDF
+```
+
+Important AI answer summary:
+
+- Read the copied Git metadata in `gitHistory/` with Git commands.
+- Created `docs/git-history.md` with the real commit log and task mapping.
+- Added `target/` and `.idea/` to `.gitignore` because they are generated or IDE-local files.
+- Re-ran the Gradle build and verification commands.
+- Reported remaining manual submission actions instead of changing Git history.
+
 ## Reflection
 
 AI support was useful mainly for structuring the Phase 2 work and for checking the project against the assignment requirements. The most helpful parts were creating JGiven stage classes, writing acceptance scenarios, preparing simple export and reporting classes, and drafting documentation. These tasks involve many small details, so the AI helped to keep the checklist visible and to avoid forgetting required items such as the JGiven report path, tags, multi-run scenario, manual JSON export, and the architecture ADRs.

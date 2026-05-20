@@ -31,6 +31,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    doNotTrackState("OneDrive can expose generated test report files as unreadable placeholders.")
     systemProperty("jgiven.report.dir", layout.projectDirectory.dir("target/jgiven-reports/json").asFile.absolutePath)
     finalizedBy(tasks.jacocoTestReport)
     finalizedBy("jgivenHtmlReport")

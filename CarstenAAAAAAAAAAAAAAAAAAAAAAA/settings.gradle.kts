@@ -1,1 +1,1 @@
-rootProject.name = "CarstenAAAAAAAAAAAAAAAAAAAAAAA"
+rootProject.name = "mayfly-analytics"
