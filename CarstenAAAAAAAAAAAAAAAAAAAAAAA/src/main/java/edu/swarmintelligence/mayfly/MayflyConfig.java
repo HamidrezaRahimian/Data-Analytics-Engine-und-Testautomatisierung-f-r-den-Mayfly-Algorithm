@@ -19,23 +19,34 @@ public record MayflyConfig(
 
     public MayflyConfig {
         if (dimensions <= 0) throw new IllegalArgumentException("dimensions > 0");
+        if (!Double.isFinite(lowerBound)) throw new IllegalArgumentException("lowerBound must be finite");
+        if (!Double.isFinite(upperBound)) throw new IllegalArgumentException("upperBound must be finite");
         if (lowerBound >= upperBound) throw new IllegalArgumentException("lowerBound < upperBound");
         if (populationSize <= 1) throw new IllegalArgumentException("populationSize > 1");
         if (maxIterations <= 0) throw new IllegalArgumentException("maxIterations > 0");
+        if (!Double.isFinite(wMax)) throw new IllegalArgumentException("wMax must be finite");
+        if (!Double.isFinite(wMin)) throw new IllegalArgumentException("wMin must be finite");
         if (wMin >= wMax) throw new IllegalArgumentException("wMin < wMax");
-        if (a1 <= 0 || a2 <= 0 || a3 <= 0 || beta <= 0 || danceCoeff <= 0 || flightCoeff <= 0 || mutationStdDev <= 0) {
-            throw new IllegalArgumentException("Koeffizienten müssen > 0 sein");
+        if (!Double.isFinite(a1) || !Double.isFinite(a2) || !Double.isFinite(a3)
+                || !Double.isFinite(beta) || !Double.isFinite(danceCoeff)
+                || !Double.isFinite(flightCoeff) || !Double.isFinite(mutationStdDev)) {
+            throw new IllegalArgumentException("coefficients must be finite");
+        }
+        if (a1 <= 0 || a2 <= 0 || a3 <= 0 || beta <= 0 || danceCoeff <= 0
+                || flightCoeff <= 0 || mutationStdDev <= 0) {
+            throw new IllegalArgumentException("coefficients must be > 0");
         }
     }
+
     public static MayflyConfig ackley10D() {
         return new MayflyConfig(
-                10, -32.768, 32.768,       // bounds
-                40, 1000,                  // pop size, iterations
-                0.9, 0.4,                  // inertia weights
-                1.0, 1.5, 1.5,             // attraction coefficients
-                2.0,                       // beta
-                0.1, 0.1,                  // dance, flight
-                0.01 * (32.768 + 32.768)   // mutation std (0.01 × range) as per paper
+                10, -32.768, 32.768,
+                40, 1000,
+                0.9, 0.4,
+                1.0, 1.5, 1.5,
+                2.0,
+                0.1, 0.1,
+                0.01 * (32.768 + 32.768)
         );
     }
 }
