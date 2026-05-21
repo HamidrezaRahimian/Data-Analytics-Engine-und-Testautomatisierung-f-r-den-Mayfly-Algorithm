@@ -117,6 +117,7 @@ src/test/java/edu/swarmintelligence/mayfly/   unit and acceptance tests
 src/test/resources/                           test configuration
 docs/                                         documentation and generated analytics report
 docs/git-history.md                          copied Git history summary
+git-history.bundle                           Git history for submission
 build/                                        Gradle build output
 target/                                       generated JGiven and analytics output
 ```

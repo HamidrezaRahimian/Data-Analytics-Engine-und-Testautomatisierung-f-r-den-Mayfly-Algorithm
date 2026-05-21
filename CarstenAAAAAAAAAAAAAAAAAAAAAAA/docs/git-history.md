@@ -1,7 +1,7 @@
 # Git History
 
 This file summarizes the copied Git history in `gitHistory/`.
-The folder contains the repository metadata used for submission history checks.
+The same history is also exported as `git-history.bundle` for submission.
 
 ## Commit log
 
@@ -40,4 +40,10 @@ The same log can be checked with:
 
 ```powershell
 git --git-dir=gitHistory log --oneline --all
+```
+
+The bundle can be checked with:
+
+```powershell
+git bundle verify git-history.bundle
 ```
